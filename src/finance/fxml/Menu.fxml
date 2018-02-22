@@ -9,33 +9,52 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             prefHeight="400.0" prefWidth="600.0">
+    <VBox AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
 
-    <MenuBar>
-        <menus>
-            <Menu text="File">
-                <items>
-                    <Menu text="New">
-                        <items>
-                            <MenuItem text="Credit" />
-                            <MenuItem text="Debit" />
-                        </items>
-                    </Menu>
-                    <MenuItem text="Exit" />
-                </items>
-            </Menu>
-            <Menu text="Reports">
-                <items>
-                    <MenuItem text="Spent" />
-                    <MenuItem text="Charts" />
-                </items>
-            </Menu>
-            <Menu text="Help">
-                <items>
-                    <MenuItem text="Manual" />
-                    <MenuItem text="Web Page" />
-                    <MenuItem text="About" />
-                </items>
-            </Menu>
-        </menus>
-    </MenuBar>
+
+        <MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <Menu text="New">
+                            <items>
+                                <MenuItem text="Credit" />
+                                <MenuItem text="Debit" />
+                            </items>
+                        </Menu>
+                        <MenuItem text="Exit" />
+                    </items>
+                </Menu>
+                <Menu text="Reports">
+                    <items>
+                        <MenuItem text="Spent" />
+                        <MenuItem text="Charts" />
+                    </items>
+                </Menu>
+                <Menu text="Help">
+                    <items>
+                        <MenuItem text="Manual" />
+                        <MenuItem text="Web Page" />
+                        <MenuItem text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <ToolBar>
+            <Button text="+">
+                <tooltip>
+                    <Tooltip text="Este es el boton de sumatoria el cual nos ayudara a poder sumar, todavia no sabemos que pero lo que si sabemos es que nos ayuda a sumar"/>
+                </tooltip>
+            </Button>
+            <Separator orientation="VERTICAL"/>
+            <Button text="-">
+
+            </Button>
+            <Separator orientation="VERTICAL"/>
+            <Button text="*">
+
+            </Button>
+
+        </ToolBar>
+    </VBox>
 </AnchorPane>
