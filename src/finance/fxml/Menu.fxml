@@ -14,6 +14,12 @@
         <menus>
             <Menu text="File">
                 <items>
+                    <Menu text="New">
+                        <items>
+                            <MenuItem text="Credit" />
+                            <MenuItem text="Debit" />
+                        </items>
+                    </Menu>
                     <MenuItem text="Exit" />
                 </items>
             </Menu>
@@ -25,6 +31,8 @@
             </Menu>
             <Menu text="Help">
                 <items>
+                    <MenuItem text="Manual" />
+                    <MenuItem text="Web Page" />
                     <MenuItem text="About" />
                 </items>
             </Menu>
