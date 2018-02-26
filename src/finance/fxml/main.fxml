@@ -1,0 +1,49 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane fx:controller="finance.controllers.Controller"
+            xmlns:fx="http://javafx.com/fxml" >
+
+    <VBox alignment="CENTER" AnchorPane.bottomAnchor="3" AnchorPane.topAnchor="3" AnchorPane.leftAnchor="5" AnchorPane.rightAnchor="5">
+        <TableView fx:id="tblTransactions" VBox.vgrow="ALWAYS" >
+            <columns>
+                <TableColumn fx:id="tblColCategory" text="Category">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="category" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="tblDescription" text="Description">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="tblDate" text="Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="tblType" text="Type">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="type" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn fx:id="tblAmount" text="Amount">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="amount" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

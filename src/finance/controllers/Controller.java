@@ -1,4 +1,4 @@
-package finance;
+package finance.controllers;
 
 public class Controller {
 }

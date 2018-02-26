@@ -7,11 +7,8 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
+            xmlns:fx="http://javafx.com/fxml">
     <VBox AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-
-
         <MenuBar>
             <menus>
                 <Menu text="File">
@@ -43,7 +40,7 @@
         <ToolBar>
             <Button text="+">
                 <tooltip>
-                    <Tooltip text="Este es el boton de sumatoria el cual nos ayudara a poder sumar, todavia no sabemos que pero lo que si sabemos es que nos ayuda a sumar"/>
+                    <Tooltip text="Add Credit"/>
                 </tooltip>
             </Button>
             <Separator orientation="VERTICAL"/>
@@ -54,7 +51,6 @@
             <Button text="*">
 
             </Button>
-
         </ToolBar>
     </VBox>
 </AnchorPane>

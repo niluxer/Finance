@@ -15,16 +15,24 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        //Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         mainPane.setTop(getTopContent());
+        mainPane.setCenter(getCenterContent());
+
         primaryStage.setTitle("Finance");
         primaryStage.setScene(new Scene(mainPane, 300, 275));
         primaryStage.show();
+        primaryStage.setMaximized(true);
     }
 
     private Parent getTopContent() throws IOException
     {
         return FXMLLoader.load(getClass().getResource("fxml/Menu.fxml"));
+    }
+
+    private Parent getCenterContent() throws IOException
+    {
+        return FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
     }
 
 
