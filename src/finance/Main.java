@@ -20,7 +20,9 @@ public class Main extends Application {
         mainPane.setCenter(getCenterContent());
 
         primaryStage.setTitle("Finance");
-        primaryStage.setScene(new Scene(mainPane, 300, 275));
+        Scene scene = new Scene(mainPane, 300, 275);
+        scene.getStylesheets().add("/finance/resources/css/controlStyle2.css");
+        primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setMaximized(true);
     }

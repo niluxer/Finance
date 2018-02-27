@@ -45,5 +45,6 @@
                 </TableColumn>
             </columns>
         </TableView>
+        <fx:include source="statusBar.fxml"/>
     </VBox>
 </AnchorPane>

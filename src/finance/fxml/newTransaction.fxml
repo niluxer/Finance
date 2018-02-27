@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="finance.fxml.NewTransaction"
+            prefHeight="400.0" prefWidth="600.0">
+
+            <Label text="Categoty" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtCategoty" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtDescription" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <DatePicker fx:id="dpDate" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Type" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <ToggleButton GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <RadioButton text="Credit" fx:id="rbCredit"/>
+                <RadioButton text="Debit" fx:id="rbDebit"/>
+            </ToggleButton>
+
+            <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <DatePicker fx:id="txtAmount" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+</GridPane>
