@@ -6,10 +6,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <GridPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="finance.fxml.NewTransaction"
-            prefHeight="400.0" prefWidth="600.0">
+          xmlns:fx="http://javafx.com/fxml"
+
+          prefHeight="400.0" prefWidth="600.0">
 
             <Label text="Categoty" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
             <TextField fx:id="txtCategoty" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
@@ -28,4 +29,21 @@
 
             <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
             <DatePicker fx:id="txtAmount" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="5">
+    <Button text="Save" contentDisplay="LEFT" textFill="dodgerblue">
+    <graphic>
+        <FontAwesomeIconView text="SAVE" fill="darkseagreen">
+
+        </FontAwesomeIconView>
+    </graphic>
+    </Button>
+        <Button text="Cancel" contentDisplay="LEFT" textFill="goldenrod">
+            <graphic>
+                <FontAwesomeIconView text="SKULL_CROSSBONES" fill="midnightblue">
+
+                </FontAwesomeIconView>
+            </graphic>
+
+        </Button>
+    </HBox>
 </GridPane>
