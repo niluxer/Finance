@@ -46,7 +46,7 @@ public class MenuController implements Initializable {
         try {
             Parent parent = loader.load();
             loader.setController(controller);
-            Scene scene=new Scene(parent,250,200);
+            Scene scene=new Scene(parent,550,200);
             stage.setScene(scene);
             stage.show();
         }

@@ -18,10 +18,11 @@ public class Main extends Application {
         //Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         mainPane.setTop(getTopContent());
         mainPane.setCenter(getCenterContent());
+        mainPane.getStylesheets().add("/finance/resources/css/DarkTheme2.css");
 
         primaryStage.setTitle("Finance");
         Scene scene = new Scene(mainPane, 300, 275);
-        scene.getStylesheets().add("/finance/resources/css/controlStyle2.css");
+        //scene.getStylesheets().add("/finance/resources/css/controlStyle2.css");
         primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setMaximized(true);

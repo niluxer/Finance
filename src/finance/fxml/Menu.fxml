@@ -6,8 +6,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml">
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="finance.controllers.MenuController">
     <VBox AnchorPane.bottomAnchor="0" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
         <MenuBar>
             <menus>
@@ -38,17 +40,33 @@
             </menus>
         </MenuBar>
         <ToolBar>
-            <Button text="+">
+            <Button fx:id="btnCredit" text="Credit" contentDisplay="TOP" textFill="blanchedalmond">
                 <tooltip>
                     <Tooltip text="Add Credit"/>
                 </tooltip>
-            </Button>
-            <Separator orientation="VERTICAL"/>
-            <Button text="-">
+                <graphic>
+                    <FontAwesomeIconView glyphName="PLUS_CIRCLE" glyphSize="30" fill="burlywood">
 
+                    </FontAwesomeIconView>
+                </graphic>
             </Button>
             <Separator orientation="VERTICAL"/>
-            <Button text="*">
+
+            <Button fx:id="btnDebit" text="Debit" contentDisplay="TOP" textFill="chartreuse">
+                <graphic>
+                <FontAwesomeIconView glyphName="MINUS_CIRCLE" glyphSize="30" fill="aquamarine">
+
+                </FontAwesomeIconView>
+                </graphic>
+            </Button>
+
+            <Separator orientation="VERTICAL"/>
+            <Button fx:id="btnDelete" text="Delete" contentDisplay="TOP" textFill="antiquewhite">
+                <graphic>
+                <FontAwesomeIconView glyphName="TRASH" glyphSize="30" fill="aliceblue">
+
+                </FontAwesomeIconView>
+                </graphic>
 
             </Button>
         </ToolBar>
