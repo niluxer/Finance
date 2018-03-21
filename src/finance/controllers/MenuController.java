@@ -40,13 +40,15 @@ public class MenuController implements Initializable {
         stage.setTitle("New Transaction");
         stage.setResizable(false);
 
+
         FXMLLoader loader= new FXMLLoader(getClass().getResource("../fxml/newTransaction.fxml"));
         NewTransactionController controller= new NewTransactionController();
 
         try {
             Parent parent = loader.load();
             loader.setController(controller);
-            Scene scene=new Scene(parent,550,200);
+            parent.getStylesheets().add("/finance/resources/css/DarkTheme2.css");
+            Scene scene=new Scene(parent,330,200);
             stage.setScene(scene);
             stage.show();
         }

@@ -7,39 +7,45 @@
 <?import javafx.scene.layout.*?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
 <GridPane xmlns="http://javafx.com/javafx"
-          xmlns:fx="http://javafx.com/fxml"
+          xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
 
-          prefHeight="400.0" prefWidth="600.0">
+    <Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="txtCategory" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
 
-            <Label text="Categoty" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-            <TextField fx:id="txtCategoty" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="txtDescription" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-            <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-            <TextField fx:id="txtDescription" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <DatePicker fx:id="dpDate" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-            <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-            <DatePicker fx:id="dpDate" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Type" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <fx:define>
+        <ToggleGroup fx:id="toggleGroup1" />
+    </fx:define>
+    <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <RadioButton text="Credit" fx:id="rbCredit" toggleGroup="$toggleGroup1"/>
+        <RadioButton text="Debit" fx:id="rbDebit" toggleGroup="$toggleGroup1"/>
+    </HBox>
 
-            <Label text="Type" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-            <ToggleButton GridPane.columnIndex="1" GridPane.rowIndex="3">
-                <RadioButton text="Credit" fx:id="rbCredit"/>
-                <RadioButton text="Debit" fx:id="rbDebit"/>
-            </ToggleButton>
 
-            <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-            <DatePicker fx:id="txtAmount" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-    <HBox GridPane.columnIndex="0" GridPane.rowIndex="5">
-    <Button text="Save" contentDisplay="LEFT" textFill="dodgerblue">
-    <graphic>
-        <FontAwesomeIconView text="SAVE" fill="darkseagreen">
+    <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextField fx:id="txtAmount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+    <HBox GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <Button text="Save" contentDisplay="LEFT" textFill="whitesmoke">
+        <graphic>
+            <FontAwesomeIconView glyphName="SAVE" fill="whitesmoke">
 
-        </FontAwesomeIconView>
-    </graphic>
-    </Button>
-        <Button text="Cancel" contentDisplay="LEFT" textFill="goldenrod">
+            </FontAwesomeIconView>
+        </graphic>
+        </Button>
+        <Button text="Cancel" contentDisplay="LEFT" textFill="whitesmoke">
             <graphic>
-                <FontAwesomeIconView text="SKULL_CROSSBONES" fill="midnightblue">
+                <FontAwesomeIconView glyphName="ARROW_LEFT" fill="whitesmoke">
 
                 </FontAwesomeIconView>
             </graphic>
