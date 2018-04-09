@@ -1,6 +1,7 @@
 package finance.controllers;
 
 import finance.database.model.Transaction;
+import finance.database.model.dao.MySQL;
 import finance.database.model.dao.TransactionDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,7 +13,7 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
     @FXML
     TableView<Transaction> tblTransactions;
-    TransactionDAO transactionDAO = new TransactionDAO();
+    TransactionDAO transactionDAO = new TransactionDAO(MySQL.getConnection());
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -20,6 +21,6 @@ public class Controller implements Initializable {
     }
 
     private void initTableTransactions(){
-        tblTransactions.setItems(transactionDAO.getData());
+        tblTransactions.setItems(transactionDAO.fetchAll());
     }
 }
