@@ -39,36 +39,5 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <ToolBar>
-            <Button fx:id="btnCredit" text="Credit" contentDisplay="TOP" textFill="blanchedalmond">
-                <tooltip>
-                    <Tooltip text="Add Credit"/>
-                </tooltip>
-                <graphic>
-                    <FontAwesomeIconView glyphName="PLUS_CIRCLE" glyphSize="30" fill="burlywood">
-
-                    </FontAwesomeIconView>
-                </graphic>
-            </Button>
-            <Separator orientation="VERTICAL"/>
-
-            <Button fx:id="btnDebit" text="Debit" contentDisplay="TOP" textFill="chartreuse">
-                <graphic>
-                <FontAwesomeIconView glyphName="MINUS_CIRCLE" glyphSize="30" fill="aquamarine">
-
-                </FontAwesomeIconView>
-                </graphic>
-            </Button>
-
-            <Separator orientation="VERTICAL"/>
-            <Button fx:id="btnDelete" text="Delete" contentDisplay="TOP" textFill="antiquewhite">
-                <graphic>
-                <FontAwesomeIconView glyphName="TRASH" glyphSize="30" fill="aliceblue">
-
-                </FontAwesomeIconView>
-                </graphic>
-
-            </Button>
-        </ToolBar>
     </VBox>
 </AnchorPane>

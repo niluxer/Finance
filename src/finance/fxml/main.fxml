@@ -8,10 +8,46 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Separator?>
 <AnchorPane fx:controller="finance.controllers.Controller"
             xmlns:fx="http://javafx.com/fxml" >
 
     <VBox alignment="CENTER" AnchorPane.bottomAnchor="3" AnchorPane.topAnchor="3" AnchorPane.leftAnchor="5" AnchorPane.rightAnchor="5">
+        <ToolBar>
+            <Button fx:id="btnCredit" text="Credit" contentDisplay="TOP" textFill="blanchedalmond">
+                <tooltip>
+                    <Tooltip text="Add Credit"/>
+                </tooltip>
+                <graphic>
+                    <FontAwesomeIconView glyphName="PLUS_CIRCLE" glyphSize="30" fill="burlywood">
+
+                    </FontAwesomeIconView>
+                </graphic>
+            </Button>
+            <Separator orientation="VERTICAL"/>
+
+            <Button fx:id="btnDebit" text="Debit" contentDisplay="TOP" textFill="chartreuse">
+                <graphic>
+                    <FontAwesomeIconView glyphName="MINUS_CIRCLE" glyphSize="30" fill="aquamarine">
+
+                    </FontAwesomeIconView>
+                </graphic>
+            </Button>
+
+            <Separator orientation="VERTICAL"/>
+            <Button fx:id="btnDelete" text="Delete" contentDisplay="TOP" textFill="antiquewhite">
+                <graphic>
+                    <FontAwesomeIconView glyphName="TRASH" glyphSize="30" fill="aliceblue">
+
+                    </FontAwesomeIconView>
+                </graphic>
+
+            </Button>
+        </ToolBar>
+
         <TableView fx:id="tblTransactions" VBox.vgrow="ALWAYS" >
             <columns>
                 <TableColumn fx:id="tblColCategory" text="Category">

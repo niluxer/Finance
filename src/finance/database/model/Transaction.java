@@ -1,21 +1,25 @@
 package finance.database.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Transaction {
+    private int id;
+    private String category;
+    private String description;
+    private Date date_created;
+    private double amount;
+    private char type;
 
-    String category;
-    String description;
-    Date date;
-    char type;
-    double amount;
+    public Transaction() {
+    }
 
-    public Transaction(String category, String description, Date date, char type, double amount) {
+    public Transaction(int id, String category, String description, Date date_created, char type, double amount) {
+        this.id = id;
         this.category = category;
         this.description = description;
-        this.date = date;
-        this.type = type;
+        this.date_created = date_created;
         this.amount = amount;
+        this.type = type;
     }
 
     public String getCategory() {
@@ -34,12 +38,20 @@ public class Transaction {
         this.description = description;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDate_created() {
+        return date_created;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate_created(Date date_created) {
+        this.date_created = date_created;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     public char getType() {
@@ -50,11 +62,11 @@ public class Transaction {
         this.type = type;
     }
 
-    public double getAmount() {
-        return amount;
+    public int getId() {
+        return id;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setId(int id) {
+        this.id = id;
     }
 }

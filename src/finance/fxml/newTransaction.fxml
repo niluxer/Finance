@@ -8,7 +8,7 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
-<GridPane xmlns="http://javafx.com/javafx"
+<GridPane fx:controller="finance.controllers.NewTransactionController" xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml">
     <padding>
         <Insets topRightBottomLeft="10" />
@@ -28,22 +28,21 @@
         <ToggleGroup fx:id="toggleGroup1" />
     </fx:define>
     <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
-        <RadioButton text="Credit" fx:id="rbCredit" toggleGroup="$toggleGroup1"/>
-        <RadioButton text="Debit" fx:id="rbDebit" toggleGroup="$toggleGroup1"/>
+        <RadioButton id="rbCredit" text="Credit" fx:id="rbCredit" toggleGroup="$toggleGroup1"/>
+        <RadioButton id="rbDebit" text="Debit" fx:id="rbDebit" toggleGroup="$toggleGroup1"/>
     </HBox>
-
 
     <Label text="Amount" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
     <TextField fx:id="txtAmount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
     <HBox GridPane.columnIndex="1" GridPane.rowIndex="6">
-        <Button text="Save" contentDisplay="LEFT" textFill="whitesmoke">
+        <Button fx:id="btnSave" text="Save" contentDisplay="LEFT" textFill="whitesmoke">
         <graphic>
             <FontAwesomeIconView glyphName="SAVE" fill="whitesmoke">
 
             </FontAwesomeIconView>
         </graphic>
         </Button>
-        <Button text="Cancel" contentDisplay="LEFT" textFill="whitesmoke">
+        <Button fx:id="btnCancel" text="Cancel" contentDisplay="LEFT" textFill="whitesmoke">
             <graphic>
                 <FontAwesomeIconView glyphName="ARROW_LEFT" fill="whitesmoke">
 

@@ -15,46 +15,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
-    @FXML
-    Button btnDelete, btnCredit,btnDebit;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        btnCredit.setOnAction(handler);
-        btnDebit.setOnAction(handler);
-        btnDelete.setOnAction(handler);
     }
-    EventHandler <ActionEvent> handler= new EventHandler<ActionEvent>() {
-        @Override
-        public void handle(ActionEvent event) {
-            if(event.getSource()==btnCredit)
-            {
-                showNewTransactionStage();
 
-            }
-        }
-    };
-
-    private void showNewTransactionStage() {
-        Stage stage=new Stage();
-        stage.setTitle("New Transaction");
-        stage.setResizable(false);
-
-
-        FXMLLoader loader= new FXMLLoader(getClass().getResource("../fxml/newTransaction.fxml"));
-        NewTransactionController controller= new NewTransactionController();
-
-        try {
-            Parent parent = loader.load();
-            loader.setController(controller);
-            parent.getStylesheets().add("/finance/resources/css/DarkTheme2.css");
-            Scene scene=new Scene(parent,330,200);
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-    }
 }

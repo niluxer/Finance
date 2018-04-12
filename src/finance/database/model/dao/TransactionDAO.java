@@ -33,6 +33,7 @@ public class TransactionDAO {
             Transaction p = null;
             while(rs.next()) {
                 p = new Transaction(
+                        rs.getInt("id"),
                         rs.getString("category"), rs.getString("description"),
                         rs.getDate("date_created"), rs.getString("type").charAt(0),
                         rs.getDouble("amount") );
@@ -63,6 +64,7 @@ public class TransactionDAO {
             Transaction p = null;
             while(rs.next()) {
                 p = new Transaction(
+                        rs.getInt("id"),
                         rs.getString("category"), rs.getString("description"),
                         rs.getDate("date_created"), rs.getString("type").charAt(0),
                         rs.getDouble("amount") );
@@ -86,8 +88,9 @@ public class TransactionDAO {
             Statement st = conn.createStatement();
             rs = st.executeQuery(query);
             e = new Transaction(
+                    rs.getInt("id"),
                     rs.getString("category"), rs.getString("description"),
-                    rs.getDate("date"), rs.getString("type").charAt(0),
+                    rs.getDate("date_created"), rs.getString("type").charAt(0),
                     rs.getDouble("amount") );
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -108,42 +111,43 @@ public class TransactionDAO {
         }
         return false;
     }
-    
-  /*  public Boolean insert(Transaction employee) {
+
+    public Boolean insert(Transaction transaction) {
         try {
             String query = "insert into transaction "
-                    + " (emp_no, birth_date, first_name, last_name, gender, hire_date)"
-                    + " values (?, ?, ?, ?, ?, ?)";
+                    + " (category, description, date_created, amount, type)"
+                    + " values (?, ?, ?, ?, ?)";
             PreparedStatement st =  conn.prepareStatement(query);
-            st.setInt(   1, employee.getEmp_no());
-            st.setDate(  2, employee.getBirth_date());
-            st.setString(3, employee.getFirst_name());
-            st.setString(4, employee.getLast_name());
-            st.setString(5, String.valueOf(employee.getGender()));
-            st.setDate(  6, employee.getHire_date());
+            st.setString(1, transaction.getCategory());
+            st.setString(2, transaction.getDescription());
+            st.setDate(  3, transaction.getDate_created());
+            st.setDouble(4, transaction.getAmount());
+            st.setString(5, String.valueOf(transaction.getType()));
             st.execute();
+            //data.add(transaction);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-        
-        return false;
-    }    
 
-    public Boolean update(Employee employee) {
+        return false;
+    }
+
+    public Boolean update(Transaction transaction) {
         try {
-            String query = "update employees "
-                    + " set birth_date = ?, first_name = ?, last_name = ?, gender = ?, hire_date = ?"
-                    + " where emp_no=?";
+            String query = "update transaction "
+                    + " set category = ?, description = ?, date_created = ?, amount = ?, type = ?"
+                    + " where id=?";
+            System.out.println(query + "updating....");
             PreparedStatement st =  conn.prepareStatement(query);
 
-            st.setDate(  1, employee.getBirth_date());
-            st.setString(2, employee.getFirst_name());
-            st.setString(3, employee.getLast_name());
-            st.setString(4, String.valueOf(employee.getGender()));
-            st.setDate(  5, employee.getHire_date());
-            st.setInt(   6, employee.getEmp_no());
+            st.setString(1, transaction.getCategory());
+            st.setString(2, transaction.getDescription());
+            st.setDate(  3, transaction.getDate_created());
+            st.setDouble(4, transaction.getAmount());
+            st.setString(5, String.valueOf(transaction.getType()));
+            st.setInt(6, transaction.getId());
             st.execute();
             return true;
         } catch (Exception e) {
@@ -152,6 +156,6 @@ public class TransactionDAO {
         }
 
         return false;
-    }*/
+    }
 
 }
