@@ -101,7 +101,7 @@ public class TransactionDAO {
     
     public Boolean delete(int id) {
         try {
-            String query = "delete from transactions where id= ?";
+            String query = "delete from transaction where id= ?";
             PreparedStatement st = conn.prepareStatement(query);
             st.setInt(1, id);
             st.execute();

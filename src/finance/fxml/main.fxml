@@ -64,7 +64,7 @@
 
                 <TableColumn fx:id="tblDate" text="Date">
                     <cellValueFactory>
-                        <PropertyValueFactory property="date" />
+                        <PropertyValueFactory property="date_created" />
                     </cellValueFactory>
                 </TableColumn>
 

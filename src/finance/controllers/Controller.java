@@ -49,9 +49,19 @@ public class Controller implements Initializable {
                 showNewTransactionStage();
 
             }
+            else if(event.getSource()==btnDelete){
+                deleteTransaction();
+            }
         }
     };
 
+    private void deleteTransaction(){
+        if(tblTransactions.getSelectionModel().getSelectedIndex()>=0)
+            if(transactionDAO.delete(tblTransactions.getSelectionModel().getSelectedItem().getId()))
+                reloadData();
+
+
+    }
     private void showNewTransactionStage() {
         Stage stage=new Stage();
         stage.setTitle("New Transaction");
